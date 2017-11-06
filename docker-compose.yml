@@ -1,0 +1,11 @@
+version: '3'
+services:
+
+  db
+    restart: always
+    image: postgres:9.6-alpine
+    network_mode: host
+    ports:
+      - "5432:5432"
+    volumes:
+      - /var/lib/pleroma/postgres:/var/lib/postgresql/data
