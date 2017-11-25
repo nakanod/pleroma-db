@@ -9,3 +9,8 @@ services:
       - "5432:5432"
     volumes:
       - /var/lib/pleroma/postgres:/var/lib/postgresql/data
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+        max-file: "4"
